@@ -1,0 +1,55 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:five="http://namespaces.zope.org/five"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+	>
+
+<five:registerPackage package="." initialize=".initialize" />
+
+<genericsetup:registerProfile
+        name="default"
+        title="Cookie Optout package"
+        directory="profiles/default"
+        description="Extension profile for cookie optout package"
+        provides="Products.GenericSetup.interfaces.EXTENSION"
+    />
+  
+  <browser:viewlet
+    name="headnet.plone.cookieoptout"
+    manager="plone.app.layout.viewlets.interfaces.IPortalTop"
+    class=".cookieoptout.CookieOptOutViewlet"
+    template="cookieoptout.pt"
+    for="*"
+    layer=".interfaces.ICookieOptoutLayer"
+    permission="zope2.View"
+  />
+  
+  <browser:page
+      name="cookieoptout-settings-controlpanel"
+      for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+      class=".controlpanel.ControlPanel"
+      permission="cmf.ManagePortal"
+      layer=".interfaces.ICookieOptoutLayer"
+      />
+
+  <adapter
+      for="*"
+      provides=".interfaces.ICookieOptoutSettings"
+      factory=".controlpanel.get_settings"
+      />
+  
+
+<browser:resource
+      name="cookieoptout.js"
+      file="cookieoptout.js"
+      layer=".interfaces.ICookieOptoutLayer"
+      />
+
+<browser:resource
+      name="cookieoptout.css"
+      file="cookieoptout.css"
+      layer=".interfaces.ICookieOptoutLayer"
+      />
+
+</configure>

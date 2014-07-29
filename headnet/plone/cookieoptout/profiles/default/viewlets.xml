@@ -1,0 +1,5 @@
+<object>
+    <order manager="plone.portaltop" skinname="*">
+        <viewlet name="headnet.plone.cookieoptout" insert-before="*" />
+    </order>
+</object>

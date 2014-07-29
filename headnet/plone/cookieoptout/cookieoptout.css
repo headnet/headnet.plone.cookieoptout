@@ -1,0 +1,30 @@
+
+#portal-cookieoptout {
+  background-color: white;
+  border-bottom-color: black;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  display: none;
+  text-align: left;
+  width: 100%;
+  }
+#cookieoptoutinner {
+  font-size: 12px;
+  margin: auto;
+  max-width: 960px;
+  padding-top: 15px;
+  }
+#cookieoptoutinner p {
+  margin-bottom: 1em;
+  max-width: 960px;
+  }
+#cookieoptoutinner strong {
+  font-size: 110%;
+  }
+#content a.redLink,
+#portal-cookieoptout a.redLink{
+  color: #c72200;
+  padding: 0 0 0 13px;
+  text-decoration: none;
+  }
+

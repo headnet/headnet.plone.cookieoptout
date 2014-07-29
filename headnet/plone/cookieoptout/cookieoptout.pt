@@ -1,0 +1,20 @@
+<div id="portal-cookieoptout" style="display:none;">
+  <div id="cookieoptoutinner"
+       tal:condition="view/contents"
+       tal:content="structure view/contents">
+    <p>
+      <strong>Vi samler statistik ved hjælp af cookies for at forbedre brugeroplevelsen</strong><br/>
+      Vi begynder dog først, når du klikker dig videre til næste side.
+    </p>
+    <p>
+      Ønsker du at sige nej tak til statistik cookies, så klik her: <br/>
+      <a class="redLink" href="#cookieoptout">Nej tak til statistik cookies.</a><br/>
+      Vi bruger en cookie for at huske dit nej.
+    </p>
+    <p>
+      <a class="redLink" href="/cookies#cookieoptoutdefer">Læs mere om cookies på fivu.dk</a><br/>
+      Her kan du bl.a. læse, hvordan du slår cookies fra i din browser, hvis du ønsker helt at undgå cookies.
+    </p>
+  </div>
+  <div class="visualClear"></div>
+</div>

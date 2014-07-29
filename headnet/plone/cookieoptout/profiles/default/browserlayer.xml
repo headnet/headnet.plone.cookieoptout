@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<layers>
+    <layer name="CookieOptoutLayer"
+        interface="headnet.plone.cookieoptout.interfaces.ICookieOptoutLayer"
+    />
+</layers>
