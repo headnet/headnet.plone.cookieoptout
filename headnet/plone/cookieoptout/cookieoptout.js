@@ -27,13 +27,14 @@ function getCookie(name){
 var optoutcookie = 'cookieoptout'
 var cookie_opt_out_status = getCookie(optoutcookie);
 
-$.ajaxSetup({ cache: true });
+jQuery.ajaxSetup({ cache: true });
 
 
-//if (cookie_opt_out_status == 'yes' || cookie_opt_out_status == null) {
-//    window['ga-disable-UA-18702110-1'] = true;
+if (cookie_opt_out_status == 'yes' || cookie_opt_out_status == null) {
+    window['ga-disable-UA-42051765-1'] = true;
+}
 //} else {
-//    $.getScript("/++resource++policy.survey.js");
+//    jQuery().getScript("/++resource++policy.survey.js");
 //}
 
 function deleteAllCookies() {
@@ -57,7 +58,7 @@ function cookie_opt_in() {
     if (cookie_opt_out_status != 'no') {
 	newCookie(optoutcookie, 'no', 30);
 	// track current page view
-	window['ga-disable-UA-18702110-1'] = false;
+	window['ga-disable-UA-42051765-1'] = false;
 	_gaq.push(['_trackPageview']);
     }
 }
@@ -75,18 +76,18 @@ jQuery(function($) {
 	cookie_opt_in();
     }
     else if (cookie_opt_out_status == null) {
-	$('#portal-cookieoptout').slideDown('normal');
+	jQuery('#portal-cookieoptout').slideDown('normal');
 
-	$("a").filter(':noparents(#portal-globalnav)').bind('click', function() {
+	jQuery("a").filter(':noparents(#portal-globalnav)').bind('click', function() {
 	    if ( window.location.hostname === this.hostname && this.hash === '') {
 		cookie_opt_in();
 	    }
 	});
     }
 
-  $("a[href|='#cookieoptout'], a[href|='#cookieoptin']").on('click', function(event) {
+  jQuery("a[href|='#cookieoptout'], a[href|='#cookieoptin']").on('click', function(event) {
     if (this.hash == '#cookieoptout') {
-      $('#portal-cookieoptout').slideUp('normal');
+      jQuery('#portal-cookieoptout').slideUp('normal');
       cookie_opt_out();
     } else {
       cookie_opt_in();
