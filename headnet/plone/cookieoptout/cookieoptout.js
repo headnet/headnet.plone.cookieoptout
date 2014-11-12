@@ -85,7 +85,7 @@ jQuery(function($) {
 	});
     }
 
-  jQuery("a[href|='#cookieoptout'], a[href|='#cookieoptin']").on('click', function(event) {
+  jQuery("a[href|='#cookieoptout'], a[href|='#cookieoptin']").click(function(event) {
     if (this.hash == '#cookieoptout') {
       jQuery('#portal-cookieoptout').slideUp('normal');
       cookie_opt_out();
