@@ -59,6 +59,7 @@ function cookie_opt_in() {
 	newCookie(optoutcookie, 'no', 30);
 	// track current page view
 	window['ga-disable-UA-42051765-1'] = false;
+	var _gaq = _gaq || {};
 	_gaq.push(['_trackPageview']);
     }
 }
