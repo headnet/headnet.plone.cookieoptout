@@ -1,12 +1,16 @@
 
 #portal-cookieoptout {
   background-color: white;
-  border-bottom-color: black;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
+  border-top-color: black;
+  border-top-style: solid;
+  border-top-width: 2px;
   display: none;
   text-align: left;
   width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 99999;
   }
 #cookieoptoutinner {
   font-size: 12px;
