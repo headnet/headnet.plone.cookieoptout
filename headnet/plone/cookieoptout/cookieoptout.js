@@ -31,7 +31,7 @@ jQuery.ajaxSetup({ cache: true });
 
 
 if (cookie_opt_out_status == 'yes' || cookie_opt_out_status == null) {
-    window['ga-disable-UA-42051765-1'] = true;
+    window['ga-disable-UA-70856278-1'] = true;
 }
 //} else {
 //    jQuery().getScript("/++resource++policy.survey.js");
